@@ -12,6 +12,9 @@ var notesRouter = require('./routes/notes');
 var catRouter = require('./routes/cat');
 var L8_dogRouter = require('./routes/L8dog');
 
+var notes_from_bRouter = require('./routes/notes_from_b');
+
+
 var app = express();
 
 // view engine setup
@@ -31,6 +34,8 @@ app.use('/notes', notesRouter);
 
 app.use('/cat', catRouter);
 app.use('/L8dog', L8_dogRouter);
+
+app.use('/notes_from_b', notes_from_bRouter);
 
 
 // catch 404 and forward to error handler
